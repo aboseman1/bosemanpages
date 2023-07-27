@@ -22,7 +22,7 @@ import {
 } from "@yext/pages";
 import { isProduction } from "@yext/pages/util";
 import "../index.css";
-import Favicon from "../assets/images/yext-favicon.ico";
+import Favicon from "../assets/images/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpeg";
 import About from "../components/About";
 import Banner from "../components/Banner";
 import Details from "../components/Details";
@@ -82,9 +82,8 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug
     ? document.slug
-    : `${document.locale}/${document.address.region}/${document.address.city}/${
-        document.address.line1
-      }-${document.id.toString()}`;
+    : `${document.locale}/${document.address.region}/${document.address.city}/${document.address.line1
+    }-${document.id.toString()}`;
 };
 
 /**
