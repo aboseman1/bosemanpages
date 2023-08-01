@@ -5,10 +5,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#" },
+  { name: "State", href: "#" },
 ];
 
 const Header = () => {
+  const headerLogo = "../assets/images/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpeg"
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
@@ -30,14 +31,15 @@ const Header = () => {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block lg:hidden"
-                    src="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
+                    src=".https://www.creativefabrica.com/wp-content/uploads/2021/11/17/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpg"
                     alt="Your Company"
                     width="50"
                     height="50"
                   />
                   <img
                     className="hidden lg:block"
-                    src="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
+                    src=".https://www.creativefabrica.com/wp-content/uploads/2021/11/17/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpg"
+                    src="https://www.creativefabrica.com/wp-content/uploads/2021/11/17/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpg"
                     alt="Your Company"
                     width="50"
                     height="50"
@@ -49,16 +51,16 @@ const Header = () => {
                       key={link.href}
                       buttonText={link.name}
                       url={link.href}
-                      style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-orange"
+                      style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-black"
                     />
                   ))}
                 </div>
               </div>
               <div className="flex items-center">
                 <Cta
-                  buttonText="Order Online"
+                  buttonText="Get Quote"
                   url="#"
-                  style="text-white bg-orange shadow-md"
+                  style="text-white bg-black shadow-md"
                 />
               </div>
             </div>

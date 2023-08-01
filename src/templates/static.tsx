@@ -17,7 +17,7 @@ import {
 import PageLayout from "../components/PageLayout";
 import Card from "../components/Card";
 import { ExternalImage } from "../types/ExternalImage";
-import Favicon from "../assets/images/yext-favicon.ico";
+import Favicon from "../assets/images/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpeg";
 import Banner from "../components/Banner";
 
 /**

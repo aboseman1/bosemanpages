@@ -30,7 +30,10 @@ import Hours from "../components/Hours";
 import PageLayout from "../components/PageLayout";
 import EditTool from "../components/EditTool";
 import BreadCrumbs from "../components/Breadcrumbs";
-
+import List from "../components/List";
+import PhotoGallery from "./components/PhotoGallery";
+import PaymentOptions from "../components/PaymentOptions";
+import Accordion from "../components/Accordion";
 /**
  * Required when Knowledge Graph data is used for a template.
  */
@@ -61,6 +64,8 @@ export const config: TemplateConfig = {
       "dm_directoryParents.slug",
       "dm_directoryParents.meta",
       "dm_directoryParents.c_addressRegionDisplayName",
+      "paymentOptions",
+      "c_featuredFAQs",
     ],
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -170,6 +175,9 @@ const Location: Template<TemplateRenderProps> = ({
     mainPhone,
     services,
     description,
+    paymentOptions,
+    c_featuredFAQs,
+    photoGallery,
     siteDomain,
     dm_directoryParents,
   } = document;
@@ -178,18 +186,23 @@ const Location: Template<TemplateRenderProps> = ({
     <>
       <PageLayout>
         <Banner name={name} address={address} />
-        <div className="centered-container">
+
+        <div className="centered-container text-black">
           <BreadCrumbs
             breadcrumbs={dm_directoryParents}
             baseUrl={relativePrefixToRoot}
           />
-          <div className="grid gap-x-10 gap-y-10 md:grid-cols-2">
+          <div className=" justify-center items-center">
+            <h2 className="text-center pb-10 text-4xl font-bold">Restaurant Details</h2>
+          </div>
+          <div className="grid gap-x-10 gap-y-10 md:grid-cols-3">
             <Details address={address} phone={mainPhone} services={services} />
             {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
             {description && <About name={name} description={description} />}
           </div>
         </div>
-      </PageLayout>
+
+      </PageLayout >
       {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
       {!isProduction(siteDomain) && <EditTool data={document} />}
     </>

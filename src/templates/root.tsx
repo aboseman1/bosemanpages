@@ -2,7 +2,7 @@ import * as React from "react";
 import PageLayout from "../components/PageLayout";
 import Banner from "../components/Banner";
 import DirectoryRootGrid from "../components/DirectoryRootGrid";
-import Favicon from "../assets/images/yext-favicon.ico";
+import Favicon from "../assets/images/AB-initial-logo-design-AB-logo-Graphics-20338404-1-580x387.jpeg";
 import "../index.css";
 import {
   Template,
